@@ -1,0 +1,69 @@
+s    <ons-page id="home">
+      <ons-toolbar fixed-style>
+        <div class="left"><ons-toolbar-button id="menu_button"><ons-icon icon="fa-bars"></ons-icon></ons-toolbar-button></div>
+        <div class="center">
+          <img class="logo" src="assets/img/Logo.png">
+      </div>
+  
+        <!--  <div class="right">
+          <ons-toolbar-button><ons-icon icon="fa-search"></ons-icon></ons-toolbar-button>
+          <ons-if platform="android"><ons-toolbar-button><ons-icon icon="ion-android-more-vertical"></ons-icon></ons-toolbar-button></ons-if>
+        </div>  -->
+  
+      </ons-toolbar>
+  
+      <ons-carousel class="carousel" swipeable auto-scroll id="carousel">
+        <ons-carousel-item>
+          <img src="assets/img/pepsi.jpg">
+        </ons-carousel-item>
+        <ons-carousel-item>
+          <img src="assets/img/exo.jpg">
+        </ons-carousel-item>
+        <ons-carousel-item>
+          <img src="assets/img/kb.jpg">
+        </ons-carousel-item>
+      </ons-carousel>
+  
+       <!-- <div class="cover-label center">
+        <ul>
+          <li><div id="dot0" class="circle circle_current">&#x25cf;</div></li>
+          <li><div id="dot1" class="circle">&#x25cf;</div></li>
+          <li><div id="dot2" class="circle">&#x25cf;</div></li>
+        </ul>
+      </div>  -->
+      
+  
+      <div class="movie_list">
+        <ons-carousel auto-refresh swipeable overscrollable item-width="110px">
+          <ons-carousel-item modifier="nodivider" id="Movie 1" onclick="openMovieDetails(this.id)">
+            <img src="assets/img/exo1.jpg">
+          </ons-carousel-item>
+          <ons-carousel-item modifier="nodivider" id="Movie 2" onclick="openMovieDetails(this.id)">
+            <img src="assets/img/nct1.jpg">
+          </ons-carousel-item>
+          <ons-carousel-item modifier="nodivider" id="Movie 3" onclick="openMovieDetails(this.id)">
+            <img src="assets/img/bp1.jpg">
+          </ons-carousel-item>
+          <ons-carousel-item modifier="nodivider" id="Movie 4" onclick="openMovieDetails(this.id)">
+            <img src="assets/img/yg1.jpg">
+          </ons-carousel-item>
+      </div>
+  
+      <div class="movie_list">
+        <ons-carousel auto-refresh swipeable overscrollable item-width="110px">
+          <ons-carousel-item modifier="nodivider" id="Top Movie 1" onclick="openMovieDetails(this.id)">
+            <img src="assets/img/yg2.jpg">
+          </ons-carousel-item>
+          <ons-carousel-item modifier="nodivider" id="Top Movie 2" onclick="openMovieDetails(this.id)">
+            <img src="assets/img/exo2.jpg">
+          </ons-carousel-item>
+          <ons-carousel-item modifier="nodivider" id="Top Movie 3" onclick="openMovieDetails(this.id)">
+            <img src="assets/img/bp2.jpg">
+          </ons-carousel-item>
+          <ons-carousel-item modifier="nodivider" id="Top Movie 4" onclick="openMovieDetails(this.id)">
+            <img src="assets/img/sm.jpg">
+          </ons-carousel-item>
+        </ons-carousel>
+      </div>
+  
+    </ons-page>

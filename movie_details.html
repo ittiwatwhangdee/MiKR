@@ -1,0 +1,75 @@
+    <ons-page id="movie_details">
+      <ons-toolbar class="trailer_toolbar" modifier="transparent" inline>
+        <div class="left">
+          <ons-if platform="android"><ons-back-button>Back</ons-back-button></ons-if>
+        </div>
+        <div class="right">
+          <ons-if platform="android">
+            <ons-toolbar-button><ons-icon icon="md-cast"></ons-icon></ons-toolbar-button>
+            <ons-toolbar-button><ons-icon icon="md-share"></ons-icon></ons-toolbar-button>
+            <ons-toolbar-button><ons-icon icon="fa-search"></ons-icon></ons-toolbar-button>
+          </ons-if>
+          <ons-if platform="ios">
+            <ons-toolbar-button onclick="goBack()"><ons-icon style="opacity: 0.7; color: black" icon="ion-ios-close"></ons-icon></ons-toolbar-button>
+          </ons-if>
+        </div>
+      </ons-toolbar>
+  
+      <div class="trailer">
+        <ons-icon icon="fa-play-circle"></ons-icon>
+        <img src="assets/img/onsenui-roadmap.jpg">
+      </div>
+  
+      <div class="movie_info">
+        <h2 id="movie_title"></h2>
+        <ons-row class="movie_general_info">
+          <ons-col class="stars">
+            <ons-icon style="color: red" icon="fa-star"></ons-icon>
+            <ons-icon style="color: red" icon="fa-star"></ons-icon>
+            <ons-icon style="color: red" icon="fa-star"></ons-icon>
+            <ons-icon style="color: red" icon="fa-star"></ons-icon>
+            <ons-icon style="color: gray" icon="fa-star"></ons-icon>
+          </ons-col>
+          <ons-col>2016</ons-col>
+          <ons-col>TV-14</ons-col>
+          <ons-col>2h 0m</ons-col>
+        </ons-row>
+        <div class="movie_synopsis">When the protagonist was a child, he dreamed of becoming a hero of a story that everyone will know. As he aged, he realized his dreams are just that - dreams and nothing more. But never did he expect that when he turned 21 years old, the unexpected would have happened and that the story he was longing for will start to unfold.</div>
+        <div class="movie_cast">
+          Cast: Actor 1, Actress 1, Actor 2, Actress 2 <br/>
+          Director: Popular Director
+        </div>
+        <ons-row class="movie_extra_buttons">
+          <ons-col>
+            <ons-button modifier="quiet">
+              <ons-icon icon="ion-plus-round"></ons-icon>
+              <div>My List</div>
+            </ons-button>
+          </ons-col>
+          <ons-col>
+            <ons-if platform="ios">
+              <ons-button modifier="quiet">
+                <ons-icon icon="ion-ios-upload-outline"></ons-icon>
+                <div>Share</div>
+              </ons-button>
+            </ons-if>
+          </ons-col>
+        </ons-row>
+      </div>
+  
+      <div class="movie_list">
+        Similar Movies
+        <ons-carousel auto-refresh swipeable overscrollable item-width="110px">
+          <ons-carousel-item modifier="nodivider" id="Similar Movie 1" onclick="openMovieDetails(this.id)">
+            <img src="assets/img/movie_cover_template.jpg">
+          </ons-carousel-item>
+          <ons-carousel-item modifier="nodivider" id="Similar Movie 2" onclick="openMovieDetails(this.id)">
+            <img src="assets/img/movie_cover_template.jpg">
+          </ons-carousel-item>
+          <ons-carousel-item modifier="nodivider" id="Similar Movie 3" onclick="openMovieDetails(this.id)">
+            <img src="assets/img/movie_cover_template.jpg">
+          </ons-carousel-item>
+        </ons-carousel>
+      </div>
+  
+    </ons-page>
