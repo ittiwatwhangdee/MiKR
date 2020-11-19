@@ -1,0 +1,88 @@
+<ons-page id="home">
+
+    <ons-navigator swipeable id="myNavigator" page="page1.html"></ons-navigator>
+    <template id="page1.html">
+        <ons-page id="Home">
+            <ons-carousel class="carousel" swipeable auto-scroll id="carousel"">
+                <ons-carousel-item>
+                    <div style="text-align: center; font-size: 30px; color: #fff;">
+                        <img src="assets/img/pepsi.jpg" alt="" id="johnwick">
+                    </div>
+                </ons-carousel-item>
+                <ons-carousel-item>
+                    <div style="text-align: center; font-size: 30px; color: #fff;">
+                        <img src="assets/img/exo.jpg" alt="" id="wonderwoman">
+                    </div>
+                </ons-carousel-item>
+                <ons-carousel-item>
+                    <div style=" text-align: center; font-size: 30px; color: #fff; ">
+                        <img src=" assets/img/kb.jpg " alt=" " id="toystory">
+                    </div>
+                </ons-carousel-item>
+            </ons-carousel>
+
+            <div class="col-4" style = "padding-left:0px;padding-right:0px">
+                <div id="" class="imgSrc d-flex align-items-end" style="background-image: url" >
+                    <div class="movietextbg">
+                        <div class="movietitle-Src"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="movie_list">
+                <ons-carousel auto-refresh swipeable overscrollable item-width="150px">
+                    <ons-carousel-item modifier="nodivider" id="Movie 1" onclick="openMovieDetails(this.id)">
+                        <img src="assets/img/e1.png">
+                    </ons-carousel-item>
+                    <ons-carousel-item modifier="nodivider" id="Movie 2" onclick="openMovieDetails(this.id)">
+                        <img src="assets/img/e2.png">
+                    </ons-carousel-item>
+                    <ons-carousel-item modifier="nodivider" id="Movie 3" onclick="openMovieDetails(this.id)">
+                        <img src="assets/img/e3.png">
+                    </ons-carousel-item>
+                </ons-carousel>
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <br>
+           
+ 
+            <div class="movie_list">
+                <ons-carousel auto-refresh swipeable overscrollable item-width="150px">
+                    <ons-carousel-item modifier="nodivider">
+                        <img src="assets/img/e7.png" >
+                    </ons-carousel-item>
+                    <ons-carousel-item modifier="nodivider">
+                        <img src="assets/img/e4.png">
+                    </ons-carousel-item>
+                    <ons-carousel-item modifier="nodivider">
+                        <img src="assets/img/e6.png">
+                    </ons-carousel-item>
+                </ons-carousel>
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <div class="movie_list">
+                <ons-carousel auto-refresh swipeable overscrollable item-width="150px">
+                    <ons-carousel-item modifier="nodivider">
+                        <img src="assets/img/e5.png">
+                    </ons-carousel-item>
+                    <ons-carousel-item modifier="nodivider">
+                        <img src="assets/img/e8.png">
+                    </ons-carousel-item>
+                    <ons-carousel-item modifier="nodivider">
+                        <img src="assets/img/e9.png">
+                    </ons-carousel-item>
+                </ons-carousel>
+            </div>
+
+
+        </ons-page>
+    </template>
+</ons-page>
