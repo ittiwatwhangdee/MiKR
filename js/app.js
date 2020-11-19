@@ -13,7 +13,7 @@ $(function() {
                 document.querySelector('#myNavigator').pushPage('views/detail2.html');
             };
             page.querySelector('#toystory').onclick = function() {
-                document.querySelector('#myNavigator').pushPage('views/detail3.html');
+                document.querySelector('#myNavigator').pushPage('views/cart.html');
             };
         } else if (page.id === 'johnwick' || page.id === 'wonderwoman' || page.id === 'toystory') {
             $('#back').show();
