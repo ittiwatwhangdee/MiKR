@@ -27,15 +27,13 @@
         <ons-splitter-side id="menu" side="right" width="220px" collapse swipeable>
             <ons-page>
                 <ons-list style="background: black;">
-                    <ons-list-item onclick="fn.load('home.html')" tappable>
-                        YG Entertainment
-                    </ons-list-item>
-                    <ons-list-item onclick="fn.load('search.html')" tappable>
-                        Search
-                    </ons-list-item>
-                    <ons-list-item onclick="fn.load('cart.html')" tappable>
-                        Cart
-                    </ons-list-item>
+                    <ons-list-header class="menu_header">View by Entertainment</ons-list-header>
+                    <ons-list-item tappable>SM</ons-list-item>
+                    <ons-list-item tappable>YG</ons-list-item>
+                    <ons-list-item tappable>JYP</ons-list-item>
+                    <ons-list-item tappable>BigHit</ons-list-item>
+                    <ons-list-item tappable>Other</ons-list-item>
+                   
 
                 </ons-list>
             </ons-page>
@@ -51,7 +49,7 @@
                 </div>
                 <div class="right">
                     <ons-toolbar-button onclick="fn.open()">
-                        <ons-icon icon="md-menu" style="color: #EC1D8F;"></ons-icon>
+                        <ons-icon icon="fa-bars" style="color: #EC1D8F;"></ons-icon>
                     </ons-toolbar-button>
                 </div>
                 <div class="center">
