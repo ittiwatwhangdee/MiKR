@@ -25,8 +25,8 @@ $(function() {
     
 })
 
-function openMovieDetails(id) {
-    document.querySelector('#myNavigator').pushPage('movie_details.html', {data: {title: id}});
+function openproductDetails(id) {
+    document.querySelector('#myNavigator').pushPage('product_details.html', {data: {title: id}});
   }
 
   function goBack() {
@@ -36,4 +36,18 @@ function openMovieDetails(id) {
   }
 
 
+  window.fn = {};
 
+  window.fn.open = function() {
+    var menu = document.getElementById('menu');
+    menu.open();
+  };
+  
+  window.fn.load = function(page) {
+    var content = document.getElementById('content');
+    var menu = document.getElementById('menu');
+    content.load(page)
+      .then(menu.close.bind(menu));
+  };
+
+ 

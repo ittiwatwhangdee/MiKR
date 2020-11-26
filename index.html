@@ -23,27 +23,68 @@
 </head>
 
 <body>
+    <ons-splitter>
+        <ons-splitter-side id="menu" side="right" width="220px" collapse swipeable>
+            <ons-page>
+                <ons-list style="background: black;">
+                    <ons-list-item onclick="fn.load('home.html')" tappable>
+                        YG Entertainment
+                    </ons-list-item>
+                    <ons-list-item onclick="fn.load('search.html')" tappable>
+                        Search
+                    </ons-list-item>
+                    <ons-list-item onclick="fn.load('cart.html')" tappable>
+                        Cart
+                    </ons-list-item>
 
-    <ons-page id="home">
-        <ons-toolbar>
-            <div class="right"><ons-toolbar-button id="menu_button"><ons-icon icon="fa-bars"></ons-icon></ons-toolbar-button></div>
-            <div class="left">
-                <ons-back-button id="back"></ons-back-button>
-            </div>
-            <div class="center">
-                <img class="logo" src="assets/img/Logo.png">
-            </div>
+                </ons-list>
+            </ons-page>
+        </ons-splitter-side>
+        <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+    </ons-splitter>
 
-        </ons-toolbar>
-        <ons-tabbar swipeable position="auto">
-            <ons-tab page="views/home.html" class="bg-title" icon="md-home,material:md-home" bage="7"></ons-tab>
-            <ons-tab page="views/search.html" class="bg-title" icon="md-search,material:md-search" bage="7"></ons-tab>
-            <ons-tab page="views/favorite.html" class="bg-title" icon="md-favorite,material:md-favorite" bage="7"></ons-tab>
-            <ons-tab page="views/download.html" class="bg-title" icon="md-shopping-cart" bage="7"></ons-tab>
-            <ons-tab page="views/profile.html" class="bg-title" icon="md-account-circle" bage="7"></ons-tab>
+    <template id="home.html">
+        <ons-page>
+            <ons-toolbar>
+                <div class="left">
+                    <ons-back-button id="back"></ons-back-button>
+                </div>
+                <div class="right">
+                    <ons-toolbar-button onclick="fn.open()">
+                        <ons-icon icon="md-menu" style="color: #EC1D8F;"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">
+                    <img class="logo" src="assets/img/Logo.png">
+                </div>
+            </ons-toolbar>
 
-        </ons-tabbar>
-    </ons-page>
+            <ons-page id="home">
+
+                <ons-tabbar swipeable position="auto">
+                    <ons-tab page="views/home.html" class="bg-title" bage="7">
+                        <ons-icon  icon="md-home,material:md-home" size="25px"></ons-icon>
+                    </ons-tab>
+                    <ons-tab page="views/search.html" class="bg-title"  bage="7">
+                        <ons-icon icon="md-search,material:md-search" size="25px"></ons-icon>
+                    </ons-tab>
+                    <ons-tab page="views/cart.html" class="bg-title"  bage="7">
+                        <ons-icon icon="md-shopping-cart"  size="25px"></ons-icon>
+                    </ons-tab>
+                    <ons-tab page="views/profile.html" class="bg-title" bage="7">
+                        <ons-icon  icon="md-account-circle"  size="25px"></ons-icon>
+                    </ons-tab>
+
+                </ons-tabbar>
+            </ons-page>
+
+        </ons-page>
+    </template>
+
+
+
+
+
 
 </body>
 
