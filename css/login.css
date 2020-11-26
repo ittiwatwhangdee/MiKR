@@ -1,4 +1,14 @@
 /*-----------หน้า signin-----------*/
+
+body {
+    background-image: url('assets/img/BG.jpg');
+  }
+  
+  .page__background {
+    background-image:
+  linear-gradient(to bottom, rgb(54, 1, 103), rgb(107, 7, 114),rgb(175, 18, 129), rgb(230, 92, 156), rgb(251, 140, 171) );
+  }
+  
 .logo6 {
     padding: 5px;
     width: 200px;
