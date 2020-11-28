@@ -1,3 +1,19 @@
+$(function(){
+var firebaseConfig = {
+  apiKey: "AIzaSyAzvJ9RdYPrw_qrNCsMVpGi52c4Iqu6aao",
+  authDomain: "mikr-app.firebaseapp.com",
+  databaseURL: "https://mikr-app.firebaseio.com",
+  projectId: "mikr-app",
+  storageBucket: "mikr-app.appspot.com",
+  messagingSenderId: "314836526430",
+  appId: "1:314836526430:web:97e4577d431c7e23b79bcf",
+  measurementId: "G-ZZ5FHQJFQG"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+})
+
 $(function() {
     document.addEventListener('init', function(event) {
         var page = event.target;
