@@ -1,33 +1,19 @@
 <ons-page id="search">
+    <ons-navigator swipeable id="myNavigator_search" page="page2.html"></ons-navigator>
 
-    <p style="text-align: center; margin-top: 10px;">
-        <ons-search-input placeholder="Search" id="search_input"></ons-search-input>
-        </ons-search-input>
-        <button type="button" id="search" class="searchBtn">Search</button>
-    </p>
-
-  
-    <div id="search_show"></div>
-
-    <div id="sug_show"></div>
-
-
-
-
-<!-- Function Search JS -->
-<script>
-
-
-
-
-
-
-
-
-
-    
-</script>
-
-
-   
-</ons-page>
+    <template id="page2.html">
+       <ons-page id="search1">
+          <p style="text-align: center; margin-top: 10px;">
+ 
+             <ons-search-input id="searchInput" placeholder="Search" onchange="getfromSearch()"></ons-search-input>
+          </p>
+          <ons-row class="rowmagin" id="search_show">
+              
+             <ons-row id="searchItem">
+ 
+             </ons-row>
+          </ons-row>
+ 
+       </ons-page>
+    </template>
+ </ons-page>

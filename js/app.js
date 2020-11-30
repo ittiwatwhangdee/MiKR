@@ -51,8 +51,92 @@ function openproductDetails(id) {
     });
   }
 
+ function getfromSearch() {
 
-  window.fn = {};
+  const searchText = $("#searchInput").val()
+  const newsearchText = searchText.replace(/ /g, "");
+
+  $("#searchItem").empty();
+  db.collection("product").get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+
+      const productname = doc.data().name;
+      const newproductname = productname.replace(/ /g, "");
+      console.log(newproductname);
+      if (newproductname.toLowerCase().indexOf(newsearchText.toLowerCase()) != -1) {
+        if (doc.data().rating > 9) {
+          var rating = `
+          <div class="starrate">
+          <ons-icon  icon="fa-star"></ons-icon>
+          <ons-icon  icon="fa-star"></ons-icon>
+          <ons-icon  icon="fa-star"></ons-icon>
+          <ons-icon  icon="fa-star"></ons-icon>
+          <ons-icon  icon="fa-star"></ons-icon>
+    
+           <b style="font-size:x-large;color:green;text-align: right;">${doc.data().price}</b>
+          `
+        }
+        else if (doc.data().rating >= 7 && doc.data().rating < 9) {
+          var rating = `
+          <div class="starrate">
+          <ons-icon  icon="fa-star"></ons-icon>
+          <ons-icon  icon="fa-star"></ons-icon>
+          <ons-icon  icon="fa-star"></ons-icon>
+          <ons-icon  icon="fa-star"></ons-icon>
+    
+          <b style="font-size:x-large;color:green;text-align:right;">${doc.data().price}</b>
+          `
+        }
+
+        else if (doc.data().rating >= 4 && doc.data().rating < 7) {
+          var rating = `
+          <div class="starrate">
+          <ons-icon  icon="fa-star"></ons-icon>
+          <ons-icon  icon="fa-star"></ons-icon>
+          <ons-icon  icon="fa-star"></ons-icon>
+     
+    
+          <b style="font-size:x-large;color:orange;text-align:right;">${doc.data().price}</b>
+          `
+        }
+
+        else if (doc.data().rating > 1 && doc.data().rating < 5) {
+          var rating = `
+          <div class="starrate">
+          <ons-icon  icon="fa-star"></ons-icon>
+          <ons-icon  icon="fa-star"></ons-icon>
+            <b style="font-size:x-large;color:red;text-align:right;">${doc.data().price}</b>
+          `
+        }
+
+        const eiei = `
+        <ons-row class="rowmagin se" id="${doc.data().name}"> 
+        <ons-col>
+        <img src="${doc.data().posterURL}" style="width:90%;height:95%;">
+           </div>
+        </ons-col>
+        <ons-col>
+              <span class="list-item__title" style="font-family: 'Bebas Neue', cursive;font-size:18px;">${doc.data().name}</span><br>
+              <span class="list-item__subtitle" style="font-family: 'Open Sans', sans-serif;font-size:12px;">"${doc.data().entertainment}"
+                </span>
+                 <p class="rating">Ratings</p>
+                 + rating + 
+              </ons-col>
+      </ons-row>`
+        console.log(doc.data());
+        $("#searchItem").append(eiei)
+      }
+    });
+    $(".se").click(function () {
+      product_detials($(this).attr('id'))
+      document.querySelector("#myNavigator_search").pushPage('view/product_details.html');
+    })
+  });
+
+}
+
+
+window.fn = {};
 
   window.fn.open = function() {
     var menu = document.getElementById('menu');
@@ -66,79 +150,3 @@ function openproductDetails(id) {
       .then(menu.close.bind(menu));
   };
 
-
-
-  
-  $("#search").click(function () {
-    console.log("1");
-    
-           
-    $("#search_show").empty();
-    $("#sug_show").empty();
-    $("#search_show").append("");
-    var search_input = document.getElementById("search_input").value;
-    console.log(search_input);
-  
-    db.collection("search").get().then((querySnapshot) => {
-  
-      querySnapshot.forEach((doc) => {
-  
-        var nameforcheck = `${doc.data().name}`;
-        // console.log(titleforcheck);
-        var priceforcheck = `${doc.data().price}`;
-        // console.log(yearforcheck);
-  
-        var regexNumber = /\d/;
-        var regexLetter = /[a-zA-z]/;
-  
-        if (regexLetter.test(search_input)) {
-  
-          if (nameforcheck.indexOf(search_input) != -1) {
-            var row = `
-            <ons-row style="margin: 5px;">
-            <ons-col class="text-center">
-            <img src="${doc.data().posterURL}" width="70%" style="margin: 5px 5px;" alt="">
-            </ons-col>
-    
-            <ons-col>
-            <p style="font-size:18px">${doc.data().name} (${doc.data().price}) </p>
-            <p style="font-size:15px">${doc.data().entertainment}</p>
-            <p style="font-size:15px">`+ rating +`</p>
-            </ons-col>
-          
-            </ons-row>`
-  
-  
-          }
-  
-  
-        } else if (regexNumber.test(search_input)) {
-  
-          if (search_input == priceforcheck) {
-            var row = `
-            <ons-row style="margin: 5px;">
-            <ons-col class="text-center">
-            <img src="${doc.data().posterURL}" width="80%" style="margin: 5px 5px;" alt="">
-            </ons-col>
-    
-            <ons-col>
-            <p style="font-size:10px">${doc.data().name} (${doc.data().price}) (${doc.data().price})</p>
-            </ons-col>
-          
-            </ons-row>`
-  
-          }
-     
-        } else {
-          $("#search_show").empty();
-          $("#search_show").append("");
-  
-        }
-  
-        $("#search_show").append(row);
-  
-      });
-  
-    });
-  
-  });
