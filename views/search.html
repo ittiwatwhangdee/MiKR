@@ -1,77 +1,33 @@
 <ons-page id="search">
 
     <p style="text-align: center; margin-top: 10px;">
-        <ons-search-input placeholder="Search" onchange="ons.notification.alert('Searched for: ' + this.value)">
+        <ons-search-input placeholder="Search" id="search_input"></ons-search-input>
         </ons-search-input>
-
+        <button type="button" id="search" class="searchBtn">Search</button>
     </p>
 
-    <ons-carousel item-width="115px" style="text-align: center; padding-left: 1rem;margin-top: 0.8rem;"
-                swipeable auto-scroll overscrollable>
-                <ons-carousel-item class="marginAddon">
-                    <button type="button" class="btn btn-category tagbut" id="All">ALL</button>
-                </ons-carousel-item>
-                <ons-carousel-item style="margin-right: 4px;margin-left: 4px;">
-                    <button type="button" class="btn btn-category tagbut" id="Sm">SM</button>
-                </ons-carousel-item>
-                <ons-carousel-item class="marginAddon">
-                    <button type="button" class="btn btn-category tagbut" id="Yg">YG</button>
-                </ons-carousel-item>
-                <ons-carousel-item class="marginAddon">
-                    <button type="button" class="btn btn-category tagbut" id="Jyp">JYP</button>
-                </ons-carousel-item>
-                <ons-carousel-item class="marginAddon">
-                    <button type="button" class="btn btn-category tagbut" id="Bighit">BigHit</button>
-                </ons-carousel-item>
-    </ons-carousel>
+  
+    <div id="search_show"></div>
 
-    <div class="movie_list">
-        <ons-carousel auto-refresh swipeable overscrollable item-width="120px">
-            <ons-carousel-item modifier="nodivider">
-                <img src="assets/img/e11.png" id="Movie 1" onclick="openMovieDetails(this.id)">
-            </ons-carousel-item>
-            <ons-carousel-item modifier="nodivider">
-                <img src="assets/img/e2.png">
-            </ons-carousel-item>
-            <ons-carousel-item modifier="nodivider">
-                <img src="assets/img/e3.png">
-            </ons-carousel-item>
-        </ons-carousel>
-    </div>
-
-    <br>
-    <br>
-
-    <div class="movie_list">
-        <ons-carousel auto-refresh swipeable overscrollable item-width="120px">
-            <ons-carousel-item modifier="nodivider">
-                <img src="assets/img/e7.png" id="Movie 1" onclick="openMovieDetails(this.id)">
-            </ons-carousel-item>
-            <ons-carousel-item modifier="nodivider">
-                <img src="assets/img/e9.png">
-            </ons-carousel-item>
-            <ons-carousel-item modifier="nodivider">
-                <img src="assets/img/e10.png">
-            </ons-carousel-item>
-        </ons-carousel>
-    </div>
-
-    <br>
-    <br>
-
-    <div class="movie_list">
-        <ons-carousel auto-refresh swipeable overscrollable item-width="120px">
-            <ons-carousel-item modifier="nodivider">
-                <img src="assets/img/e5.png" id="Movie 1" onclick="openMovieDetails(this.id)">
-            </ons-carousel-item>
-            <ons-carousel-item modifier="nodivider">
-                <img src="assets/img/e8.png">
-            </ons-carousel-item>
-            <ons-carousel-item modifier="nodivider">
-                <img src="assets/img/e9.png">
-            </ons-carousel-item>
-        </ons-carousel>
-    </div>
+    <div id="sug_show"></div>
 
 
+
+
+<!-- Function Search JS -->
+<script>
+
+
+
+
+
+
+
+
+
+    
+</script>
+
+
+   
 </ons-page>
