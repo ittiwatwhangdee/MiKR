@@ -1,4 +1,4 @@
-
+$(function() {
 var firebaseConfig = {
   apiKey: "AIzaSyAzvJ9RdYPrw_qrNCsMVpGi52c4Iqu6aao",
   authDomain: "mikr-app.firebaseapp.com",
@@ -12,7 +12,7 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
-
+})
 
 $(function() {
     document.addEventListener('init', function(event) {
