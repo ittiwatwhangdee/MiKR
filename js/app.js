@@ -21,17 +21,17 @@ $(function() {
         console.log(page.id);
         if (page.id === 'Home') {
             $('#back').hide();
-            page.querySelector('#johnwick').onclick = function() {
+            page.querySelector('#่exolightstick').onclick = function() {
                 document.querySelector('#myNavigator').pushPage('views/detail.html');
 
             };
-            page.querySelector('#wonderwoman').onclick = function() {
+            page.querySelector('#jaehyunposcard').onclick = function() {
                 document.querySelector('#myNavigator').pushPage('views/detail2.html');
             };
-            page.querySelector('#toystory').onclick = function() {
+            page.querySelector('#btsmemories').onclick = function() {
                 document.querySelector('#myNavigator').pushPage('views/detail3.html');
             };
-        } else if (page.id === 'johnwick' || page.id === 'wonderwoman' || page.id === 'toystory') {
+        } else if (page.id === '่exolightstick' || page.id === 'jaehyunposcard' || page.id === 'btsmemories') {
             $('#back').show();
             document.querySelector('ons-back-button').onclick = function(event) {
                 document.querySelector('#myNavigator').popPage();
