@@ -1,32 +1,92 @@
 <ons-page id="wonderwoman">
-    <div class="trailer">
-        <ons-icon icon="fa-play-circle"></ons-icon>
-        <img src="assets/img/trailer2.jpg">
-    </div>
-    <div class="movie_info">
-        <h1>Wonder Woman 1984</h1>
-        <ons-row class="movie_general_info">
-            <ons-col class="stars">
-                <ons-icon style="color:  pink" icon="fa-star"></ons-icon>
-                <ons-icon style="color:   pink" icon="fa-star"></ons-icon>
-                <ons-icon style="color:   pink" icon="fa-star"></ons-icon>
-                <ons-icon style="color:   pink" icon="fa-star"></ons-icon>
-                <ons-icon style="color: gray" icon="fa-star"></ons-icon>
-            </ons-col>
-            <ons-col>2020</ons-col>
-            <ons-col>Action</ons-col>
-            <ons-col>2h 31m</ons-col>
-        </ons-row>
-        <div class="movie_synopsis">Fast forward to the 1980s as Wonder Woman's next big screen adventure finds her
-            facing two all-new foes: Max Lord and The Cheetah.Discussion of a sequel began shortly after the release of
-            the first film in June 2017 and the decision to proceed was confirmed the following month. Principal
-            photography began on June 13, 2018, with filming taking place at Warner Bros. Studios, Leavesden in England,
-            as well as the District of Columbia and Northern Virginia in the United States,
-        </div>
-        <div class="movie_cast">
-            Cast: Pedro Pascal, Robin Wright, Gal Gadot<br />
-            Director: Patty Jenkins
-        </div>
-    </div>
+    <ons-carousel class="carousel" swipeable auto-scroll id="carousel"">
+        <ons-carousel-item>
+                <img src="assets/img/EXO/e1.png">
+            </div>
+        </ons-carousel-item>
+        <ons-carousel-item>
+                <img src="assets/img/EXO/e2.png">
+            </div>
+        </ons-carousel-item>
+        <ons-carousel-item>
+                <img src="assets/img/EXO/e3.png">
+            </div>
+        </ons-carousel-item>
+    </ons-carousel>
+    
+    <!-- <ons-carousel class="area-imgDetail" swipeable auto-scroll id="carousel"">
+        <ons-carousel-item>
+                <img src="assets/img/e1.png" class="imgDetail" >
+        </ons-carousel-item>
+        <ons-carousel-item>
+                <img src="assets/img/e2.png" class="imgDetail" >
+        </ons-carousel-item>
+        <ons-carousel-item>
+                <img src="assets/img/e3.png" class="imgDetail">
+        </ons-carousel-item>
+    </ons-carousel> -->
 
+    <!-- <div class="area-imgDetail">
+        <img src="assets/img/e1.png" class="imgDetail" alt="" srcset="">
+    </div> -->
+   
+    <div class="movie_info">
+        <div class="movie_synopsis Prompt"><h1>EXO-Official Light Stick</h1>
+            <ons-row class="movie_general_info">
+
+                <ons-col class="stars">
+                    <ons-icon style="color: #EC1D8F" icon="fa-star"></ons-icon>
+                    <ons-icon style="color: #EC1D8F" icon="fa-star"></ons-icon>
+                    <ons-icon style="color: #EC1D8F" icon="fa-star"></ons-icon>
+                    <ons-icon style="color: #EC1D8F" icon="fa-star"></ons-icon>
+                    <ons-icon style="color: #EC1D8F" icon="fa-star"></ons-icon>
+                </ons-col>
+
+                <ons-col>SM Entertainment</ons-col>
+            </ons-row>
+
+            <div class="movie_cast">
+                1,000฿ THB
+            </div>
+
+            <div class="detail_product">
+            MiKR EXO Official Light Stick, Version 3.0 KPOP EXO Stick Light Concert Lamp Fan Product with A Keychain 
+            - Connect Phone Via Bluetooth
+            </div>
+            
+        </div>
+    
+
+        <div class="area-btn">
+            <ons-button type="button" id="btnPlayFav" class="cart-btn btn-lg btn-block">ADD TO CART</ons-button>
+            <div id="showVideoFav"></div>
+        </div>
+
+        <div class="area-btn">
+            <ons-button type="button" id="btnPlayFav" class="buy-btn btn-lg btn-block">BUY WITH <i class="fa fa-google fa-fw"></i> PAY</ons-button>
+            <div id="showVideoFav"></div>
+        </div>
+
+        <div class="movie_list">
+            <div class="detail_product">You might also Like</div>
+            <ons-carousel auto-refresh swipeable overscrollable item-width="110px">
+                <ons-carousel-item modifier="nodivider">
+                    <img src="assets/img/e12.png">
+                </ons-carousel-item>
+                <ons-carousel-item modifier="nodivider">
+                    <img src="assets/img/e13.png">
+                </ons-carousel-item>
+                <ons-carousel-item modifier="nodivider">
+                    <img src="assets/img/e14.png">
+                </ons-carousel-item>
+                <ons-carousel-item modifier="nodivider">
+                    <img src="assets/img/e6.png">
+                </ons-carousel-item>
+                <ons-carousel-item modifier="nodivider">
+                    <img src="assets/img/e7.png">
+                </ons-carousel-item>
+            </ons-carousel>
+        </div>
+
+    </div>
 </ons-page>

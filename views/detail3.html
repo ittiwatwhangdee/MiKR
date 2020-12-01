@@ -1,33 +1,93 @@
 <ons-page id="toystory">
-    <div class="trailer">
-        <ons-icon icon="fa-play-circle"></ons-icon>
-        <img src="assets/img/trailer3.jpg">
-    </div>
-    <div class="movie_info">
-        <h1>Toy Story 4</h1>
-        <ons-row class="movie_general_info">
-            <ons-col class="stars">
-                <ons-icon style="color:  pink" icon="fa-star"></ons-icon>
-                <ons-icon style="color:   pink" icon="fa-star"></ons-icon>
-                <ons-icon style="color:   pink" icon="fa-star"></ons-icon>
-                <ons-icon style="color:  pink" icon="fa-star"></ons-icon>
-                <ons-icon style="color: gray" icon="fa-star"></ons-icon>
-            </ons-col>
-            <ons-col>2019</ons-col>
-            <ons-col>Animation</ons-col>
-            <ons-col>1h 40m</ons-col>
-        </ons-row>
-        <div class="movie_synopsis">When a new toy called "Forky" joins Woody and the gang, a road trip alongside old
-            and new friends reveals how big the world can be for a toy.On the day of Bonnie's kindergarten orientation,
-            Woody worries over her and sneaks into her backpack. After a classmate takes away Bonnie's arts and crafts
-            supplies, Woody covertly recovers the materials and various pieces of garbage from the trash, including a
-            plastic spork. Bonnie uses these to create a bipedal spork with googly eyes, whom she dubs "Forky"
-        </div>
-        <div class="movie_cast">
-            Cast: John David Washington, Robert Pattinson, Elizabeth Debicki <br />
-            Director: Christopher Nolan
-        </div>
-    </div>
+    <ons-carousel class="carousel" swipeable auto-scroll id="carousel"">
+        <ons-carousel-item>
+                <img src="assets/img/EXO/e1.png">
+            </div>
+        </ons-carousel-item>
+        <ons-carousel-item>
+                <img src="assets/img/EXO/e2.png">
+            </div>
+        </ons-carousel-item>
+        <ons-carousel-item>
+                <img src="assets/img/EXO/e3.png">
+            </div>
+        </ons-carousel-item>
+    </ons-carousel>
+    
+    <!-- <ons-carousel class="area-imgDetail" swipeable auto-scroll id="carousel"">
+        <ons-carousel-item>
+                <img src="assets/img/e1.png" class="imgDetail" >
+        </ons-carousel-item>
+        <ons-carousel-item>
+                <img src="assets/img/e2.png" class="imgDetail" >
+        </ons-carousel-item>
+        <ons-carousel-item>
+                <img src="assets/img/e3.png" class="imgDetail">
+        </ons-carousel-item>
+    </ons-carousel> -->
 
+    <!-- <div class="area-imgDetail">
+        <img src="assets/img/e1.png" class="imgDetail" alt="" srcset="">
+    </div> -->
+   
+    <div class="movie_info">
+        <div class="movie_synopsis Prompt"><h1>EXO-Official Light Stick</h1>
+            <ons-row class="movie_general_info">
+
+                <ons-col class="stars">
+                    <ons-icon style="color: #EC1D8F" icon="fa-star"></ons-icon>
+                    <ons-icon style="color: #EC1D8F" icon="fa-star"></ons-icon>
+                    <ons-icon style="color: #EC1D8F" icon="fa-star"></ons-icon>
+                    <ons-icon style="color: #EC1D8F" icon="fa-star"></ons-icon>
+                    <ons-icon style="color: #EC1D8F" icon="fa-star"></ons-icon>
+                </ons-col>
+
+                <ons-col>SM Entertainment</ons-col>
+            </ons-row>
+
+            <div class="movie_cast">
+                1,000฿ THB
+            </div>
+
+            <div class="detail_product">
+            MiKR EXO Official Light Stick, Version 3.0 KPOP EXO Stick Light Concert Lamp Fan Product with A Keychain 
+            - Connect Phone Via Bluetooth
+            </div>
+            
+        </div>
+    
+
+        <div class="area-btn">
+            <ons-button type="button" id="btnPlayFav" class="cart-btn btn-lg btn-block">ADD TO CART</ons-button>
+            <div id="showVideoFav"></div>
+        </div>
+
+        <div class="area-btn">
+            <ons-button type="button" id="btnPlayFav" class="buy-btn btn-lg btn-block">BUY WITH <i class="fa fa-google fa-fw"></i> PAY</ons-button>
+            <div id="showVideoFav"></div>
+        </div>
+
+        <div class="movie_list">
+            <div class="detail_product">You might also Like</div>
+            <ons-carousel auto-refresh swipeable overscrollable item-width="110px">
+                <ons-carousel-item modifier="nodivider">
+                    <img src="assets/img/e12.png">
+                </ons-carousel-item>
+                <ons-carousel-item modifier="nodivider">
+                    <img src="assets/img/e13.png">
+                </ons-carousel-item>
+                <ons-carousel-item modifier="nodivider">
+                    <img src="assets/img/e14.png">
+                </ons-carousel-item>
+                <ons-carousel-item modifier="nodivider">
+                    <img src="assets/img/e6.png">
+                </ons-carousel-item>
+                <ons-carousel-item modifier="nodivider">
+                    <img src="assets/img/e7.png">
+                </ons-carousel-item>
+            </ons-carousel>
+        </div>
+
+    </div>
 
 </ons-page>
