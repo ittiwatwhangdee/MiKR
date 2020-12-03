@@ -102,7 +102,7 @@
 .cart-btn{
   text-align: center;
   font-weight: bold;
-  font-size: 9px;
+  font-size: 15px;
   background-color: #EC1D8F;
   color: white;
 }
@@ -110,7 +110,7 @@
 .buy-btn{
   text-align: center;
   font-weight: bold;
-  font-size: 9px;
+  font-size: 15px;
   background-color:rgb(53, 53, 53);
   color: white;
 }
@@ -309,7 +309,7 @@ font-family: 'SFProDisplay', SFProDisplay-Regular;
   height: 33px;
   padding-right: 1rem;
   padding-left: 1rem;
-  background-color: rgb(102, 101, 101);
+  background-color: rgb(73, 73, 73);
   color:white;
   
 }
