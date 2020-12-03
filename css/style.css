@@ -304,9 +304,7 @@ font-family: 'SFProDisplay', SFProDisplay-Regular;
 
 /*Search */
 
-
 .tagbut{
-  border-radius:0px;
   width: 100px;
   height: 33px;
   padding-right: 1rem;
@@ -320,13 +318,8 @@ font-family: 'SFProDisplay', SFProDisplay-Regular;
   margin-right: 0;
 }
 
-
-.btn-category{
-  border: 3px solid #EC1D8F;
-}
-
 .btn-category:hover{
-  border: 3px solid #EC1D8F;
+  border: 0px solid #EC1D8F;
   background-color:  #EC1D8F;
   color: white;
 }
