@@ -23,7 +23,6 @@ $(function() {
             $('#back').hide();
             page.querySelector('#่exolightstick').onclick = function() {
                 document.querySelector('#myNavigator').pushPage('views/detail.html');
-
             };
             page.querySelector('#jaehyunposcard').onclick = function() {
                 document.querySelector('#myNavigator').pushPage('views/detail2.html');
@@ -31,7 +30,10 @@ $(function() {
             page.querySelector('#btsmemories').onclick = function() {
                 document.querySelector('#myNavigator').pushPage('views/detail3.html');
             };
-        } else if (page.id === '่exolightstick' || page.id === 'jaehyunposcard' || page.id === 'btsmemories') {
+            page.querySelector('#blackpinkticket').onclick = function() {
+              document.querySelector('#myNavigator').pushPage('views/detail4.html');
+          };
+        } else if (page.id === '่exolightstick' || page.id === 'jaehyunposcard' || page.id === 'btsmemories' || page.id === 'blackpinkticket') {
             $('#back').show();
             document.querySelector('ons-back-button').onclick = function(event) {
                 document.querySelector('#myNavigator').popPage();
