@@ -17,7 +17,6 @@ var db = firebase.firestore();
 $(function() {
     document.addEventListener('init', function(event) {
         var page = event.target;
-
         console.log(page.id);
         if (page.id === 'Home') {
             $('#back').hide();
@@ -38,9 +37,10 @@ $(function() {
             document.querySelector('ons-back-button').onclick = function(event) {
                 document.querySelector('#myNavigator').popPage();
             };
-        } 
+        }else if (page.id === "search1") {
+          getEntertainment();
+      } 
     });
-    
 })
 
 function openproductDetails(id) {
@@ -101,7 +101,7 @@ function openproductDetails(id) {
    
       }
 
-        const eiei = `
+        const result = `
         <ons-row class="rowmagin se" id="${doc.data().name}"> 
         <ons-row style="margin: 5px;">
             <ons-col class="text-center">
@@ -113,8 +113,9 @@ function openproductDetails(id) {
             <p style="font-size:15px">`+ star +`</p>
             </ons-col>
       </ons-row>`
+      
         console.log(doc.data());
-        $("#searchItem").append(eiei)
+        $("#searchItem").append(result)
       }
     });
     $(".se").click(function () {
@@ -123,6 +124,38 @@ function openproductDetails(id) {
     })
   });
 
+}
+
+function getEntertainment() {
+  $("ons-carousel-item button").click(function () {
+      $("#searchResult").val("")
+      $("#searchItem").empty();
+      const targetEntertainment = $(this).attr('id')
+      db.collection("product").get().then(function (querySnapshot) {
+          querySnapshot.forEach(function (doc) {
+              const Entertainment = doc.data().entertainment
+              if (Entertainment.includes(targetEntertainment)) {
+                  const result =
+                      /*html*/
+                      `
+                      <div class="col-4" style = "padding-left:0px;padding-right:0px">
+                        <div class="imgSrc d-flex align-items-end">
+                        <img src="${doc.data().posterURL}" width="50%" style="margin: 5px 5px;" alt="">
+                        </div>
+                      </ons-col>
+                      </div>
+         
+                      `
+                  $("#searchItem").append(result);
+              }
+          });
+          $(".imgSrc").click(function () {
+              const productTarget = $(this).attr('id');
+              getmovieDetailSrc(productTarget)
+              document.querySelector("#Navigator_search").pushPage("views/product_details.html");
+          });
+      });
+  })
 }
 
 window.fn = {};
