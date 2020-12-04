@@ -138,13 +138,12 @@ function getEntertainment() {
                   const result =
                       /*html*/
                       `
-                      <div class="col-4" style = "padding-left:0px;padding-right:0px">
-                        <div class="imgSrc d-flex align-items-end">
-                        <img src="${doc.data().posterURL}" width="50%" style="margin: 5px 5px;" alt="">
-                        </div>
-                      </ons-col>
+                      <div class="row">
+                      <div class="column">
+                      <img src="${doc.data().posterURL}" style="width:100%">
                       </div>
-         
+                      </div>
+                      
                       `
                   $("#searchItem").append(result);
               }
