@@ -14,6 +14,7 @@ firebase.analytics();
 var db = firebase.firestore();
 
 
+// Home
 $(function() {
     document.addEventListener('init', function(event) {
         var page = event.target;
@@ -54,6 +55,7 @@ function openproductDetails(id) {
   }
 
 
+  // Search
  function getfromSearch() {
 
   const searchText = $("#searchInput").val()
@@ -126,6 +128,7 @@ function openproductDetails(id) {
 
 }
 
+// Search by Entertainment
 function getEntertainment() {
   $("ons-carousel-item button").click(function () {
       $("#searchResult").val("")
@@ -157,6 +160,8 @@ function getEntertainment() {
   })
 }
 
+
+// Tab
 window.fn = {};
 
   window.fn.open = function() {
@@ -170,6 +175,3 @@ window.fn = {};
     content.load(page)
       .then(menu.close.bind(menu));
   };
-
-  
-
