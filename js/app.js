@@ -31,9 +31,9 @@ firebaseConfig.auth().onAuthStateChanged(function (user){
     protoUrl = user.photoURL;
     console.log(displayName,email,photoUrl);
 
-    document.querySelector('#myNavigator').replacePage("home.html");
+    document.querySelector('#myNavigator').replacePage('home.html');
   }else{
-    document.querySelector('#myNavigator').releacePage("login.html");
+    document.querySelector('#myNavigator').releacePage('login.html');
   }
 });
 
