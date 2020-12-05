@@ -1,3 +1,4 @@
+
 function productDetail(id) {
     db.collection("product").get().then(function (querySnapshot) {
         querySnapshot.forEach(function (doc) {
