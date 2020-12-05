@@ -18,31 +18,52 @@ var db = firebase.firestore();
 $(function() {
     document.addEventListener('init', function(event) {
         var page = event.target;
-        console.log(page.id);
-        if (page.id === 'Home') {
-            $('#back').hide();
-            page.querySelector('#่exolightstick').onclick = function() {
-                document.querySelector('#myNavigator').pushPage('views/detail.html');
-            };
-            page.querySelector('#jaehyunposcard').onclick = function() {
-                document.querySelector('#myNavigator').pushPage('views/detail2.html');
-            };
-            page.querySelector('#btsmemories').onclick = function() {
-                document.querySelector('#myNavigator').pushPage('views/detail3.html');
-            };
-            page.querySelector('#blackpinkticket').onclick = function() {
-              document.querySelector('#myNavigator').pushPage('views/detail4.html');
-          };
-        } else if (page.id === '่exolightstick' || page.id === 'jaehyunposcard' || page.id === 'btsmemories' || page.id === 'blackpinkticket') {
-            $('#back').show();
-            document.querySelector('ons-back-button').onclick = function(event) {
-                document.querySelector('#myNavigator').popPage();
-            };
-        }else if (page.id === "search1") {
+         if (page.id === "home") {
+          getAdvertising();
+          getRecommend();
+        }else if (page.id ==="search1"){
           getEntertainment();
-      } 
+        }
     });
-})
+    document.querySelector('ons-tabbar').addEventListener('reactive', function (event) {
+      if (event.index == 0) {
+          document.querySelector('#Navigator_home').popPage();
+      } else if (event.index == 1) {
+          document.querySelector('#Navigator_search1').popPage();
+      }
+    })
+});
+
+function getAdvertising(){
+    db.collection("advertising").get().then(function (querySnapshot) {
+      querySnapshot.forEach(function (doc) {
+        const Result = `
+      <ons-carousel-item style="text-align: center;" id="${doc.data().name}"> 
+      <img src="${doc.data().posterURL}" style=" width:100%; ">
+      </ons-carousel-item>`
+
+      $("#advertiser").append(Result);
+      });
+    });
+  }
+
+function getRecommend(){
+    db.collection("product").get().then(function (querySnapshot) {
+      querySnapshot.forEach(function (doc) {
+        const Result = ` 
+
+        <div class="col-4">
+               <div class="product_list"> 
+                    <div id="${doc.data().name}" class="d-flex align-items-end">
+                      <img src="${doc.data().posterURL}">
+                    </div>
+               </div>
+        </div> `
+
+     $("#recommend").append(Result);
+    });
+  });
+}
 
 function openproductDetails(id) {
     document.querySelector('#myNavigator').pushPage('product_details.html', {data: {title: id}});
@@ -128,6 +149,9 @@ function openproductDetails(id) {
 
 }
 
+
+
+
 // Search by Entertainment
 function getEntertainment() {
   $("ons-carousel-item button").click(function () {
@@ -141,12 +165,12 @@ function getEntertainment() {
                   const result =
                       /*html*/
                       `
-                      <div class="row">
-                      <div class="column">
-                      <img src="${doc.data().posterURL}" style="width:100%">
-                      </div>
-                      </div>
-                      
+
+                      <ons-col class="col-6 p-1">
+                      <div class="containerH" >
+                      <img src="${doc.data().posterURL}" width="100%">
+                   </div>
+                      </ons-col>
                       `
                   $("#searchItem").append(result);
               }
