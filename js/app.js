@@ -12,7 +12,50 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 var db = firebase.firestore();
+// App logic.
+firebase.auth().onAuthStateChanged(function (user) {
+  if (user) {
+    // User is signed in.
+    // var displayName = user.displayName;
+    var email = user.email;
+    // var emailVerified = user.emailVerified;
+    // var photoURL = user.photoURL;
+    // var isAnonymous = user.isAnonymous;
+    // var uid = user.uid;
+    // var providerData = user.providerData;
 
+    console.log(email);
+    displayName = user.displayName;
+    photoUrl = user.photoURL;
+    console.log(displayName, email, photoUrl);
+
+
+    document.querySelector('#myNavigator').replacePage('tabs.html');
+  } else {
+    document.querySelector('#myNavigator').replacePage('views/signin.html');
+  }
+});
+
+document.addEventListener("prechange", function (event) {
+  if (event.tabItem) {
+    document.querySelector(
+      "ons-toolbar .center title bg-title"
+    ).innerHTML = event.tabItem.getAttribute("label");
+  }
+});
+
+
+document.addEventListener('init', function (event) {
+  var page = event.target;
+  console.log(page.id);
+
+  document.getElementById("signout").onclick = function () {
+    firebase.auth().signOut().then(function () {
+      // Sign-out successful.
+    }).catch(function (error) {
+      // An error happened.
+    });
+  }
 
 // Home
 $(function() {
